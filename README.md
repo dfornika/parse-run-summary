@@ -83,13 +83,13 @@ See `summary.txt` for typical input file
               }
               ...
            ]
-  "read_2_I": [
+  "read_2_i": [
                 {
                   ...
                 }
                 ...
               ],
-  "read_3_I": [
+  "read_3_i": [
                 {
                   ...
                 }
