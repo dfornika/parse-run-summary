@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dfornika/parse-run-summary.svg?branch=master)](https://travis-ci.org/dfornika/parse-run-summary)
+
 # parse-run-summary
 
 See `summary.txt` for typical input file
