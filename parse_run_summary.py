@@ -7,9 +7,11 @@ import json
 def parse_read_summary(summary_path):
     read_summary_headers = []
     read_summary_lines = []
+    # Basic approach to parsing text between two specific lines
+    # described here: https://stackoverflow.com/a/7559542/780188
     with open(summary_path) as summary:
         for line in summary:
-            if re.match("^Level", line):
+            if re.match("^Level,", line):
                 read_summary_headers = re.split("\s*,", line.rstrip())
                 read_summary_headers = [
                     x.lower().replace(" ", "_") for x in read_summary_headers
@@ -19,7 +21,7 @@ def parse_read_summary(summary_path):
                 ]
                 break
         for line in summary:
-            if re.match("^Total", line):
+            if re.match("^Total,", line):
                 read_summary_lines.append(re.split("\s*,", line.rstrip()))
                 break
             read_summary_lines.append(re.split("\s*,", line.rstrip()))
