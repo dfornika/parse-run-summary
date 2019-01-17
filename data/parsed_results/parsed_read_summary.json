@@ -1,0 +1,56 @@
+[
+  {
+    "level": "Read 1",
+    "yield": 4.23,
+    "projected_yield": 4.23,
+    "aligned": 0.98,
+    "error_rate": 1.42,
+    "intensity_c1": 110,
+    "percent_greater_than_q30": 81.74
+  },
+  {
+    "level": "Read 2 (I)",
+    "yield": 0.1,
+    "projected_yield": 0.1,
+    "aligned": 0,
+    "error_rate": 0.31,
+    "intensity_c1": 121,
+    "percent_greater_than_q30": 86.78
+  },
+  {
+    "level": "Read 3 (I)",
+    "yield": 0.1,
+    "projected_yield": 0.1,
+    "aligned": 0,
+    "error_rate": 0.3,
+    "intensity_c1": 119,
+    "percent_greater_than_q30": 85.43
+  },
+  {
+    "level": "Read 4",
+    "yield": 2.83,
+    "projected_yield": 4.23,
+    "aligned": 0.96,
+    "error_rate": 2.11,
+    "intensity_c1": 124,
+    "percent_greater_than_q30": 54.64
+  },
+  {
+    "level": "Non-indexed",
+    "yield": 7.06,
+    "projected_yield": 8.46,
+    "aligned": 0.97,
+    "error_rate": 1.77,
+    "intensity_c1": 117,
+    "percent_greater_than_q30": 70.87
+  },
+  {
+    "level": "Total",
+    "yield": 7.26,
+    "projected_yield": 8.66,
+    "aligned": 0.97,
+    "error_rate": 1.04,
+    "intensity_c1": 119,
+    "percent_greater_than_q30": 71.28
+  }
+]

@@ -71,8 +71,8 @@ def parse_read_summary_detail(summary_path):
 def main():
     summary_path = sys.argv[1]
     read_summary = parse_read_summary(summary_path)
-    parse_read_summary_detail(summary_path)
-    # print(json.dumps(read_summary))
+    # parse_read_summary_detail(summary_path)
+    print(json.dumps(read_summary))
     
 if __name__ == '__main__':
     main()
