@@ -329,7 +329,7 @@
             },
             "error_75": {
                 "value": null,
-                "error": 
+                "error": null
             },
             "error_100": {
                 "value": null,
@@ -441,145 +441,145 @@
         {
             "lane": 1,
             "surface": "-",
-            "tiles": ,
+            "tiles": 28,
             "density": {
-                "value": ,
-                "error": 
+                "value": 884,
+                "error": 32
             },
             "cluster_pf": {
-                "value": ,
-                "error": 
+                "value": 87.29,
+                "error": 1.32
             },
-            "legacy_phasing_rate": ,
-            "legacy_prephasing_rate": ,
-            "phasing_slope": ,
-            "phasing_offset": ,
-            "prephasing_slope": ,
-            "prephasing_offset": ,
-            "reads": ,
-            "reads_pf": ,
-            "percent_greater_than_q30": ,
-            "yield": ,
-            "cycles_error": ,
+            "legacy_phasing_rate": 0.234,
+            "legacy_prephasing_rate": 0.228,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null,
+            "reads": 16.14,
+            "reads_pf": 14.10,
+            "percent_greater_than_q30": 54.64,
+            "yield": 2.83,
+            "cycles_error": 200,
             "aligned": {
-                "value": ,
-                "error": 
+                "value": 0.96,
+                "error": 0.04
             },
             "error": {
-                "value": ,
-                "error": 
+                "value": 2.11,
+                "error": 0.13
             },
             "error_35": {
-                "value": ,
-                "error": 
+                "value": 0.37,
+                "error": 0.07
             },
             "error_75": {
-                "value": ,
-                "error": 
+                "value": 0.48,
+                "error": 0.07
             },
             "error_100": {
-                "value": ,
-                "error": 
+                "value": 0.64,
+                "error": 0.08
             },
             "intensity_c1": {
-                "value": ,
-                "error": 
+                "value": 124,
+                "error": 13
             }
         },
 	{
             "lane": 1,
             "surface": "1",
-            "tiles": ,
+            "tiles": 14,
             "density": {
-                "value": ,
-                "error": 
+                "value": 914,
+                "error": 11
             },
             "cluster_pf": {
-                "value": ,
-                "error": 
+                "value": 88.49,
+                "error": 0.62
             },
-            "legacy_phasing_rate": ,
-            "legacy_prephasing_rate": ,
-            "phasing_slope": ,
-            "phasing_offset": ,
-            "prephasing_slope": ,
-            "prephasing_offset": ,
-            "reads": ,
-            "reads_pf": ,
-            "percent_greater_than_q30": ,
-            "yield": ,
-            "cycles_error": ,
+            "legacy_phasing_rate": 0.248,
+            "legacy_prephasing_rate": 0.244,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null,
+            "reads": 8.34,
+            "reads_pf": 7.38,
+            "percent_greater_than_q30": 56.02,
+            "yield": 1.48,
+            "cycles_error": null,
             "aligned": {
-                "value": ,
-                "error": 
+                "value": 0.95,
+                "error": 0.04
             },
             "error": {
-                "value": ,
-                "error": 
+                "value": 2.14,
+                "error": 0.14
             },
             "error_35": {
-                "value": ,
-                "error": 
+                "value": 0.37,
+                "error": 0.07
             },
             "error_75": {
-                "value": ,
-                "error": 
+                "value": 0.49,
+                "error": 0.08
             },
             "error_100": {
-                "value": ,
-                "error": 
+                "value": 0.66,
+                "error": 0.09
             },
             "intensity_c1": {
-                "value": ,
-                "error": 
+                "value": 136,
+                "error": 5
             }
         },
 	{
             "lane": 1,
             "surface": "2",
-            "tiles": ,
+            "tiles": 14,
             "density": {
-                "value": ,
-                "error": 
+                "value": 854,
+                "error": 5
             },
             "cluster_pf": {
-                "value": ,
-                "error": 
+                "value": 86.09,
+                "error": 0.37
             },
-            "legacy_phasing_rate": ,
-            "legacy_prephasing_rate": ,
-            "phasing_slope": ,
-            "phasing_offset": ,
-            "prephasing_slope": ,
-            "prephasing_offset": ,
-            "reads": ,
-            "reads_pf": ,
-            "percent_greater_than_q30": ,
-            "yield": ,
-            "cycles_error": ,
+            "legacy_phasing_rate": 0.219,
+            "legacy_prephasing_rate": 0.212,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null,
+            "reads": 7.80,
+            "reads_pf": 6.72,
+            "percent_greater_than_q30": 53.11,
+            "yield": 1.35,
+            "cycles_error": null,
             "aligned": {
-                "value": ,
-                "error": 
+                "value": 0.97,
+                "error": 0.04
             },
             "error": {
-                "value": ,
-                "error": 
+                "value": 2.09,
+                "error": 0.13
             },
             "error_35": {
-                "value": ,
-                "error": 
+                "value": 0.37,
+                "error": 0.07
             },
             "error_75": {
-                "value": ,
-                "error": 
+                "value": 0.47,
+                "error": 0.06
             },
             "error_100": {
-                "value": ,
-                "error": 
+                "value": 0.62,
+                "error": 0.07
             },
             "intensity_c1": {
-                "value": ,
-                "error": 
+                "value": 113,
+                "error": 5
             }
         }
     ]

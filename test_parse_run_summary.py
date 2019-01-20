@@ -5,6 +5,7 @@ import json
 TEST_DIR_PATH = os.path.dirname(os.path.abspath(__file__))
 
 from parse_run_summary import parse_read_summary
+from parse_run_summary import parse_read_summary_detail
 
 class RunSummaryParserTest(unittest.TestCase):
     def setUp(self):
@@ -18,6 +19,17 @@ class RunSummaryParserTest(unittest.TestCase):
         paired_results = zip(parsed_result, self.parsed_read_summary_json)
         for parsed_read_summary_record, parsed_read_summary_json_record in paired_results:
             self.assertDictEqual(parsed_read_summary_record, parsed_read_summary_json_record)
+
+class RunSummaryParserDetailTest(unittest.TestCase):
+    def setUp(self):
+        self.test_data_path = os.path.join(TEST_DIR_PATH, 'data/summary.txt')
+        with open(os.path.join(TEST_DIR_PATH, 'data/parsed_results/parsed_read_summary_detail.json')) as read_summary_detail_json:
+            self.parsed_read_summary_detail_json = json.load(read_summary_detail_json)
+            read_summary_detail_json.close()
+
+    def test_parse_read_summary_detail(self):
+        parsed_result = parse_read_summary_detail(self.test_data_path)
+        self.assertDictEqual(parsed_result, self.parsed_read_summary_detail_json)
 
 if __name__ == '__main__':
     unittest.main()
