@@ -41,38 +41,70 @@ def parse_read_summary(summary_path):
     return read_summary
 
 def parse_read_summary_detail(summary_path):
+    delimiters = [
+        ("^Read 1$", "Read 2 \(I\)$"),
+        ("^Read 2 \(I\)$", "^Read 3 \(I\)$"),
+        ("^Read 3 \(I\)$", "^Read 4$"),
+        ("^Read 4$", "^Extracted:"),
+    ]
     headers = []
-    lines = []
+    int_fields = {
+        'lane',
+        'tiles',
+    }
+    float_fields = {
+        'legacy_phasing_rate',
+        'legacy_prephasing_rate',
+        'reads',
+        'reads_pf',
+        'percent_greater_than_q30',
+        'yield',
+    }
+    read_summary_detail = {}
     # Basic approach to parsing text between two specific lines
     # described here: https://stackoverflow.com/a/7559542/780188
-    with open(summary_path) as summary:
-        for line in summary:
-            if re.match("^Read 1$", line):
-                break
-        for line in summary:
-            if re.match("^Read 2 \(I\)$", line):
-                break
-            print(line)
+    for start, stop in delimiters:
+        lines = []
+        with open(summary_path) as summary:
+            for line in summary:
+                if re.match(start, line):
+                    break
+            for line in summary:
+                if re.match(stop, line):
+                    break
+                if re.match("^Lane", line):
+                    headers = re.split("\s*,", line.rstrip())
+                    headers = [
+                        x.lower().replace(" ", "_") for x in headers
+                    ]
+                    headers = [
+                        x.replace("%>=q30", "percent_greater_than_q30") for x in headers
+                    ]
+                else:
+                    lines.append(re.split("\s*,", line.rstrip()))
 
-    read_summary_detail = []
-    for line in lines:
-        line_dict = {}
-        for idx, header in enumerate(headers):
-            if header == '':
-                read_summary_line_dict[header] = line[idx]
-            elif header == '':
-                read_summary_line_dict[header] = int(line[idx])
-            else:
-                read_summary_line_dict[header] = float(line[idx])
-        read_summary_detail.append(line_dict)
+        section_list = []
+        for line in lines:
+            line_dict = {}
+            for idx, header in enumerate(headers):
+                if header in float_fields:
+                    line_dict[header] = float(line[idx])
+                elif header in int_fields:
+                    line_dict[header] = int(line[idx])
+                else:
+                    line_dict[header] = line[idx]
+            section_list.append(line_dict)
+        read_summary_detail_key = re.sub("\^|\\\\|\(|\)", "", start).replace("$", "").replace(" ", "_").lower()
+        read_summary_detail[read_summary_detail_key] = section_list 
     
     return read_summary_detail
 
 def main():
     summary_path = sys.argv[1]
     read_summary = parse_read_summary(summary_path)
-    # parse_read_summary_detail(summary_path)
-    print(json.dumps(read_summary))
+    read_summary_detail = parse_read_summary_detail(summary_path)
+    # print(json.dumps(read_summary))
+    print(json.dumps(read_summary_detail))
     
 if __name__ == '__main__':
     main()
