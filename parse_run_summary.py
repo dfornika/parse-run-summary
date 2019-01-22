@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import sys
 import re
@@ -41,6 +41,10 @@ def parse_read_summary(summary_path):
     return read_summary
 
 def parse_read_summary_detail(summary_path):
+    def parse_value_error_field(value_error_string):
+        value, error = value_error_string.split(' +/- ')
+        return {"value": value, "error": error}
+
     delimiters = [
         ("^Read 1$", "Read 2 \(I\)$"),
         ("^Read 2 \(I\)$", "^Read 3 \(I\)$"),
@@ -60,6 +64,20 @@ def parse_read_summary_detail(summary_path):
         'percent_greater_than_q30',
         'yield',
     }
+    value_error_int_fields = {
+        'density',
+        'intensity_c1',
+    }
+    value_error_float_fields = {
+        'density',
+        'cluster_pf',
+        'aligned',
+        'error',
+        'error_35',
+        'error_75',
+        'error_100',
+        'intensity_c1',
+    }
     read_summary_detail = {}
     # Basic approach to parsing text between two specific lines
     # described here: https://stackoverflow.com/a/7559542/780188
@@ -75,7 +93,7 @@ def parse_read_summary_detail(summary_path):
                 if re.match("^Lane", line):
                     headers = re.split("\s*,", line.rstrip())
                     headers = [
-                        x.lower().replace(" ", "_") for x in headers
+                        re.sub(r'\s+', ' ', re.sub(r'\(|\)', '', x)).lower().replace(" ", "_").replace("/", "_") for x in headers
                     ]
                     headers = [
                         x.replace("%>=q30", "percent_greater_than_q30") for x in headers
@@ -91,10 +109,14 @@ def parse_read_summary_detail(summary_path):
                     line_dict[header] = float(line[idx])
                 elif header in int_fields:
                     line_dict[header] = int(line[idx])
+                elif header in value_error_float_fields:
+                    line_dict[header] = {k: float(v) for k, v in parse_value_error_field(line[idx]).items() }
+                elif header in value_error_int_fields:
+                    line_dict[header] = {k: int(v) for k, v in parse_value_error_field(line[idx]).items() }
                 else:
                     line_dict[header] = line[idx]
             section_list.append(line_dict)
-        read_summary_detail_key = re.sub("\^|\\\\|\(|\)", "", start).replace("$", "").replace(" ", "_").lower()
+        read_summary_detail_key = re.sub(r'\^|\(|\)|\\|\$', '', start).replace(" ", "_").lower()
         read_summary_detail[read_summary_detail_key] = section_list 
     
     return read_summary_detail
