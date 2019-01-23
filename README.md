@@ -2,7 +2,7 @@
 
 # parse-run-summary
 
-See `summary.txt` for typical input file
+See `data/summary.txt` for typical input file
 
 `parse_read_summary()` returns:
 
