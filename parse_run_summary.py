@@ -45,6 +45,13 @@ def parse_read_summary_detail(summary_path):
         value, error = value_error_string.split(' +/- ')
         return {"value": value, "error": error}
 
+    def parse_double_value_field(double_value_string):
+        values = double_value_string.split(' / ')
+        for idx, value in enumerate(values):
+            if value == "nan":
+                values[idx] = None
+        return values
+    
     delimiters = [
         ("^Read 1$", "Read 2 \(I\)$"),
         ("^Read 2 \(I\)$", "^Read 3 \(I\)$"),
@@ -115,7 +122,27 @@ def parse_read_summary_detail(summary_path):
                     line_dict[header] = {k: int(v) for k, v in parse_value_error_field(line[idx]).items() }
                 else:
                     line_dict[header] = line[idx]
+
+            legacy_phasing_rate, legacy_prephasing_rate = parse_double_value_field(
+                line_dict.pop('legacy_phasing_prephasing_rate')
+            )
+            line_dict['legacy_phasing_rate'] = legacy_phasing_rate
+            line_dict['legacy_prephasing_rate'] = legacy_prephasing_rate
+
+            phasing_slope, phasing_offset = parse_double_value_field(
+                line_dict.pop('phasing_slope_offset')
+            )
+            line_dict['phasing_slope'] = phasing_slope
+            line_dict['phasing_offset'] = phasing_offset
+
+            prephasing_slope, prephasing_offset = parse_double_value_field(
+                line_dict.pop('prephasing_slope_offset')
+            )
+            line_dict['prephasing_slope'] = prephasing_slope
+            line_dict['prephasing_offset'] = prephasing_offset
+            
             section_list.append(line_dict)
+            
         read_summary_detail_key = re.sub(r'\^|\(|\)|\\|\$', '', start).replace(" ", "_").lower()
         read_summary_detail[read_summary_detail_key] = section_list 
     

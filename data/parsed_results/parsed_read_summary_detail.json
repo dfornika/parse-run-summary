@@ -12,12 +12,6 @@
                 "value": 87.29,
                 "error": 1.32
             },
-            "legacy_phasing_rate": 0.142,
-            "legacy_prephasing_rate": 0.159,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 16.14,
             "reads_pf": 14.10,
             "percent_greater_than_q30": 81.74,
@@ -46,7 +40,13 @@
             "intensity_c1": {
                 "value": 110,
                 "error": 10
-            }
+            },
+	    "legacy_phasing_rate": 0.142,
+            "legacy_prephasing_rate": 0.159,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         },
 	{
             "lane": 1,
@@ -60,12 +60,6 @@
                 "value": 88.49,
                 "error": 0.62
             },
-            "legacy_phasing_rate": 0.142,
-            "legacy_prephasing_rate": 0.159,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 8.34,
             "reads_pf": 7.38,
             "percent_greater_than_q30": 82.46,
@@ -94,7 +88,13 @@
             "intensity_c1": {
                 "value": 119,
                 "error": 6
-            }
+            },
+	    "legacy_phasing_rate": 0.142,
+            "legacy_prephasing_rate": 0.159,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         },
 	{
             "lane": 1,
@@ -108,12 +108,6 @@
                 "value": 86.09,
                 "error": 0.37
             },
-            "legacy_phasing_rate": 0.142,
-            "legacy_prephasing_rate": 0.156,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 7.80,
             "reads_pf": 6.72,
             "percent_greater_than_q30": 80.95,
@@ -142,7 +136,13 @@
             "intensity_c1": {
                 "value": 102,
                 "error": 4
-            }
+            },
+	    "legacy_phasing_rate": 0.142,
+            "legacy_prephasing_rate": 0.156,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         }
     ],
     "read_2_i": [
@@ -158,12 +158,6 @@
                 "value": 87.29,
                 "error": 1.32
             },
-            "legacy_phasing_rate": 0.000,
-            "legacy_prephasing_rate": 0.000,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 16.14,
             "reads_pf": 14.10,
             "percent_greater_than_q30": 86.78,
@@ -192,7 +186,13 @@
             "intensity_c1": {
                 "value": 121,
                 "error": 12
-            }
+            },
+	    "legacy_phasing_rate": 0.000,
+            "legacy_prephasing_rate": 0.000,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         },
 	{
             "lane": 1,
@@ -206,12 +206,6 @@
                 "value": 88.49,
                 "error": 0.62
             },
-            "legacy_phasing_rate": null,
-            "legacy_prephasing_rate": null,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 8.34,
             "reads_pf": 7.38,
             "percent_greater_than_q30": 87.50,
@@ -240,7 +234,13 @@
             "intensity_c1": {
                 "value": 132,
                 "error": 5
-            }
+            },
+	    "legacy_phasing_rate": null,
+            "legacy_prephasing_rate": null,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         },
 	{
             "lane": 1,
@@ -254,12 +254,6 @@
                 "value": 86.09,
                 "error": 0.37
             },
-            "legacy_phasing_rate": null,
-            "legacy_prephasing_rate": null,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 7.80,
             "reads_pf": 6.72,
             "percent_greater_than_q30": 85.98,
@@ -288,7 +282,13 @@
             "intensity_c1": {
                 "value": 110,
                 "error": 4
-            }
+            },
+	    "legacy_phasing_rate": null,
+            "legacy_prephasing_rate": null,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         }
     ],
     "read_3_i": [
@@ -304,12 +304,6 @@
                 "value": 87.29,
                 "error": 1.32
             },
-            "legacy_phasing_rate": 0.000,
-            "legacy_prephasing_rate": 0.000,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 16.14,
             "reads_pf": 14.10,
             "percent_greater_than_q30": 85.43,
@@ -338,7 +332,13 @@
             "intensity_c1": {
                 "value": 119,
                 "error": 11
-            }
+            },
+	    "legacy_phasing_rate": 0.000,
+            "legacy_prephasing_rate": 0.000,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         },
 	{
             "lane": 1,
@@ -352,12 +352,6 @@
                 "value": 88.49,
                 "error": 0.62
             },
-            "legacy_phasing_rate": null,
-            "legacy_prephasing_rate": null,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 8.34,
             "reads_pf": 7.38,
             "percent_greater_than_q30": 86.22,
@@ -386,7 +380,13 @@
             "intensity_c1": {
                 "value": 129,
                 "error": 5
-            }
+            },
+	    "legacy_phasing_rate": null,
+            "legacy_prephasing_rate": null,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         },
 	{
             "lane": 1,
@@ -400,12 +400,6 @@
                 "value": 86.09,
                 "error": 0.37
             },
-            "legacy_phasing_rate": null,
-            "legacy_prephasing_rate": null,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 7.80,
             "reads_pf": 6.72,
             "percent_greater_than_q30": 84.56,
@@ -434,7 +428,13 @@
             "intensity_c1": {
                 "value": 109,
                 "error": 4
-            }
+            },
+	    "legacy_phasing_rate": null,
+            "legacy_prephasing_rate": null,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         }
     ],
     "read_4": [
@@ -450,12 +450,6 @@
                 "value": 87.29,
                 "error": 1.32
             },
-            "legacy_phasing_rate": 0.234,
-            "legacy_prephasing_rate": 0.228,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 16.14,
             "reads_pf": 14.10,
             "percent_greater_than_q30": 54.64,
@@ -484,7 +478,13 @@
             "intensity_c1": {
                 "value": 124,
                 "error": 13
-            }
+            },
+	    "legacy_phasing_rate": 0.234,
+            "legacy_prephasing_rate": 0.228,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         },
 	{
             "lane": 1,
@@ -498,12 +498,6 @@
                 "value": 88.49,
                 "error": 0.62
             },
-            "legacy_phasing_rate": 0.248,
-            "legacy_prephasing_rate": 0.244,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 8.34,
             "reads_pf": 7.38,
             "percent_greater_than_q30": 56.02,
@@ -532,7 +526,13 @@
             "intensity_c1": {
                 "value": 136,
                 "error": 5
-            }
+            },
+	    "legacy_phasing_rate": 0.248,
+            "legacy_prephasing_rate": 0.244,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         },
 	{
             "lane": 1,
@@ -546,12 +546,6 @@
                 "value": 86.09,
                 "error": 0.37
             },
-            "legacy_phasing_rate": 0.219,
-            "legacy_prephasing_rate": 0.212,
-            "phasing_slope": null,
-            "phasing_offset": null,
-            "prephasing_slope": null,
-            "prephasing_offset": null,
             "reads": 7.80,
             "reads_pf": 6.72,
             "percent_greater_than_q30": 53.11,
@@ -580,7 +574,13 @@
             "intensity_c1": {
                 "value": 113,
                 "error": 5
-            }
+            },
+	    "legacy_phasing_rate": 0.219,
+            "legacy_prephasing_rate": 0.212,
+            "phasing_slope": null,
+            "phasing_offset": null,
+            "prephasing_slope": null,
+            "prephasing_offset": null
         }
     ]
 }
