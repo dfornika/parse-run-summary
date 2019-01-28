@@ -123,23 +123,29 @@ def parse_read_summary_detail(summary_path):
                 else:
                     line_dict[header] = line[idx]
 
-            legacy_phasing_rate, legacy_prephasing_rate = parse_double_value_field(
+            for header in value_error_float_fields | value_error_int_fields:
+                for key in ['value', 'error']:
+                    if line_dict[header][key] == "NaN":
+                        line_dict[header][key] = None
+
+            double_value_fields = {}
+            double_value_fields['legacy_phasing_rate'], double_value_fields['legacy_prephasing_rate'] = parse_double_value_field(
                 line_dict.pop('legacy_phasing_prephasing_rate')
             )
-            line_dict['legacy_phasing_rate'] = legacy_phasing_rate
-            line_dict['legacy_prephasing_rate'] = legacy_prephasing_rate
 
-            phasing_slope, phasing_offset = parse_double_value_field(
+            double_value_fields['phasing_slope'], double_value_fields['phasing_offset'] = parse_double_value_field(
                 line_dict.pop('phasing_slope_offset')
             )
-            line_dict['phasing_slope'] = phasing_slope
-            line_dict['phasing_offset'] = phasing_offset
 
-            prephasing_slope, prephasing_offset = parse_double_value_field(
+            double_value_fields['prephasing_slope'], double_value_fields['prephasing_offset'] = parse_double_value_field(
                 line_dict.pop('prephasing_slope_offset')
             )
-            line_dict['prephasing_slope'] = prephasing_slope
-            line_dict['prephasing_offset'] = prephasing_offset
+            
+            for key, value in double_value_fields.items():
+                if value:
+                    line_dict[key] = float(value)
+                else:
+                    line_dict[key] = None
             
             section_list.append(line_dict)
             
